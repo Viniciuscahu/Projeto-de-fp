@@ -1,0 +1,2 @@
+Nome: sdasd, Autor: dsadsa, Categoria: acao, Preço: 50.0, Páginas: 500
+Total gasto: 50.0

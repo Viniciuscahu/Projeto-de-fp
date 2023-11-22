@@ -1,6 +1,3 @@
-import os
-os.system('cls')
-
 biblioteca = []
 total = 0
 
@@ -111,21 +108,34 @@ def calcular_gastos_totais():
 
 
 def extrato_por_categoria():
-    categorias = []
-    for livro in biblioteca:
-        categoria = livro['categoria']
-        if categoria not in categorias:
-            categorias.append(categoria)
+    categorias = {}
+
+    with open('biblioteca.txt', 'r') as arquivo:
+        linhas = arquivo.readlines()
+
+    for linha in linhas:
+        campos = linha.strip().split(', ')
+        livro_info = {}
+        for campo in campos:
+            chave, valor = campo.split(': ')
+            livro_info[chave] = valor
+
+        if 'Categoria' in livro_info:
+            categoria = livro_info['Categoria']
+            nome = livro_info.get('Nome', '')
+
+            if categoria not in categorias:
+                categorias[categoria] = [nome]
+            else:
+                categorias[categoria].append(nome)
 
     print("Extrato da Biblioteca por Categoria:")
-    for categoria in categorias:
+    for categoria, livros in categorias.items():
         print(f"\nCategoria: {categoria}")
-        livros_por_categoria = [livro for livro in biblioteca if livro['categoria'] == categoria]
-        if livros_por_categoria:
-            for livro in livros_por_categoria:
-                print(f"Nome: {livro['nome']}")
-        else:
-            print("Nenhum livro encontrado nesta categoria.")
+        for livro in livros:
+            print(f"- {livro}")
+
+# ... (restante do código)
 
 def buscar_por_paginas():
     paginas_procuradas = int(input("Digite a quantidade de páginas desejada: "))
@@ -187,8 +197,3 @@ while True:
         break
     else:
         print("Escolha inválida. Tente novamente.")
-
-
-
-
-
