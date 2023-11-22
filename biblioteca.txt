@@ -1,2 +1,4 @@
-Nome: sdasd, Autor: dsadsa, Categoria: acao, Preço: 50.0, Páginas: 500
+Nome: pequeno principe, Autor: thomas shelby, Categoria: acao, Preço: 50.0, Páginas: 500
 Total gasto: 50.0
+Nome: velozes e furiosos, Autor: aventura, Categoria: romance, Preço: 100.0, Páginas: 400
+Total gasto: 150.0

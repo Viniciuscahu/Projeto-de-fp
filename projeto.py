@@ -1,3 +1,6 @@
+import os
+os.system('cls')
+
 biblioteca = []
 total = 0
 
@@ -19,9 +22,9 @@ def adicionar_livro():
         total += livro["preco"]
         biblioteca.append(livro)
         print("Livro adicionado com sucesso!")
-        linha = f"Nome: {livro['nome']}, Autor: {livro['autor']}, Categoria: {livro['categoria']}, Preço: {livro['preco']}, Páginas: {livro['paginas']}\n"
+        linha = f"Nome: {livro['nome']}, Autor: {livro['autor']}, Categoria: {livro['categoria']}, Preço: {livro['preco']}, Páginas: {livro['paginas']}, Total: {total}\n"
         arquivo.write(linha)
-        arquivo.write(f'Total gasto: {total}\n')
+
 def visualizar_livros():
     with open('biblioteca.txt', 'r') as biblioteca:
         conteudo = biblioteca.read()
@@ -37,6 +40,10 @@ def atualizar_livro():
             autor = input("Digite o novo nome do autor: ")
             categoria = input("Digite a nova categoria do livro: ")
             preco = float(input("Digite o novo preço do livro: "))
+
+            total -= biblioteca[i]["preco"]
+            total += preco
+
             livro = {
                 "nome": nome,
                 "autor": autor,
@@ -44,11 +51,15 @@ def atualizar_livro():
                 "preco": preco
             }
             biblioteca[i] = livro
+
             with open('biblioteca.txt', 'w') as f:
                 for livro in biblioteca:
-                    f.write(f'{livro["nome"]},{livro["autor"]},{livro["categoria"]},{livro["preco"]}\n')
+                    linha = f"Nome: {livro['nome']}, Autor: {livro['autor']}, Categoria: {livro['categoria']}, Preço: {livro['preco']}, Páginas: {livro['paginas']}, Total: {total}\n"
+                    f.write(linha)
+
             print("Livro atualizado com sucesso!")
             return
+
     print("Livro não encontrado.")
 
 
@@ -66,10 +77,12 @@ def excluir_livro_por_nome():
 
         with open('biblioteca.txt', 'w') as f:
             for livro in biblioteca:
-                f.write(f'{livro["nome"]},{livro["autor"]},{livro["categoria"]},{livro["preco"]}\n')
+                linha = f"Nome: {livro['nome']}, Autor: {livro['autor']}, Categoria: {livro['categoria']}, Preço: {livro['preco']}, Páginas: {livro['paginas']}, Total: {total}\n"
+                f.write(linha)
 
     else:
         print(f"Livro '{nome_livro}' não encontrado.")
+
 
 
 def buscar_por_categoria():
@@ -101,11 +114,26 @@ def buscar_por_categoria():
     else:
         print("Categoria não encontrada.")
 
+def calcular_gasto_final():
+    gastofinal = 0
 
-def calcular_gastos_totais():
-    print (f"R${total}")
+    with open('biblioteca.txt', 'r') as arquivo:
+        linhas = arquivo.readlines()
 
+    for linha in linhas:
+        campos = linha.strip().split(', ')
+        livro_info = {}
+        for campo in campos:
+            chave, *valor = campo.split(': ')
+            valor = ': '.join(valor)
+            livro_info[chave] = valor
 
+        if 'Preço' in livro_info:
+            preco = float(livro_info['Preço'])
+            gastofinal += preco
+
+    print(f"Gasto final com livros: R${gastofinal}")
+    return gastofinal
 
 def extrato_por_categoria():
     categorias = {}
@@ -135,7 +163,7 @@ def extrato_por_categoria():
         for livro in livros:
             print(f"- {livro}")
 
-# ... (restante do código)
+
 
 def buscar_por_paginas():
     paginas_procuradas = int(input("Digite a quantidade de páginas desejada: "))
@@ -187,7 +215,7 @@ while True:
     elif escolha == "5":
         buscar_por_categoria()
     elif escolha == "6":
-        calcular_gastos_totais()
+        calcular_gasto_final()
     elif escolha == "7":
         extrato_por_categoria()
     elif escolha == "8":
