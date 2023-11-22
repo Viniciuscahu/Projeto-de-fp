@@ -1,0 +1,4 @@
+Nome: adsa, Autor: sdad, Categoria: acao, Preço: 50.0, Páginas: 500
+Total gasto: 50.0
+Nome: dfadsa, Autor: asdfasf, Categoria: acao, Preço: 100.0, Páginas: 5000
+Total gasto: 100.0
