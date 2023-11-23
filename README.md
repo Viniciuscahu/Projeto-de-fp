@@ -12,7 +12,7 @@ Este é um sistema de gerenciamento de biblioteca simples, construído em Python
     
     Após a confirmação, o livro será adicionado à biblioteca e o sistema exibirá uma mensagem de confirmação.
 
-- 2 . Visualizar Todos os Livros:
+- 2 .Visualizar Todos os Livros:
   Escolha a opção "Visualizar todos os livros" no menu digitando o número 2.
   
   O sistema mostrará todas as informações sobre os livros atualmente registrados na biblioteca.
