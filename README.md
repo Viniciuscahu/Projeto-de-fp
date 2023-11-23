@@ -28,7 +28,7 @@ Este é um sistema de gerenciamento de biblioteca simples, construído em Python
   
   Após a confirmação, as informações do livro serão atualizadas e uma mensagem de sucesso será exibida.
 
-- 5 . Excluir um Livro:
+- 4 . Excluir um Livro:
   Escolha a opção "Excluir livro" digitando o número 4 no menu.
   
   O sistema mostrará todos os livros disponíveis.
@@ -37,31 +37,31 @@ Este é um sistema de gerenciamento de biblioteca simples, construído em Python
   
   Após a confirmação, o livro será removido da biblioteca e uma mensagem de confirmação será exibida
 
-- 6 . Visualizar Livros por Categoria:
+- 5 . Visualizar Livros por Categoria:
   Selecione a opção "Visualizar por categoria" digitando o número 5 no menu.
   
   Insira a categoria que deseja visualizar.
   
   O sistema mostrará todos os livros pertencentes à categoria especificada.
 
-- 7 . Acompanhamento de Gastos Totais:
+- 6 . Acompanhamento de Gastos Totais:
   Escolha a opção "Acompanhamento de Gastos Totais" digitando o número 6 no menu.
   
   O sistema calculará e exibirá o gasto total com todos os livros na biblioteca.
 
-- 8 . Extrato da Biblioteca por Categoria:
+- 7 . Extrato da Biblioteca por Categoria:
   Selecione a opção "Extrato da Biblioteca por Categoria" digitando o número 7 no menu.
   
   O sistema exibirá um resumo dos livros agrupados por categoria.
 
-- 9 . Buscar por Quantidade de Páginas:
+- 8 . Buscar por Quantidade de Páginas:
   Escolha a opção "Buscar por quantidade de páginas" digitando o número 8 no menu.
   
   Insira o número de páginas desejado.
   
   O sistema exibirá os livros que têm um número de páginas igual ou menor ao número inserido.
 
-- 10 . Sair do Programa:
+- 9 . Sair do Programa:
   Para encerrar o programa, selecione a opção "Sair" digitando o número 9 no menu.
   
   O programa será encerrado e você retornará ao ambiente inicial.
