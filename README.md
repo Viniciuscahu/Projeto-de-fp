@@ -1,7 +1,7 @@
 # Projeto-de-fp
 
 Sistema de Gerenciamento de Biblioteca
-Este é um sistema de gerenciamento de biblioteca simples, construído em Python, que permite realizar várias operações com uma coleção de livros. O sistema oferece as seguintes funcionalidades:
+Este é um sistema de gerenciamento de biblioteca simples, construído em Python, que permite realizar várias operações com uma coleção de livros. Você poderá inserir informações como Autor, Nome, preço, quantidade de páginas e valor total gasto. O sistema oferece as seguintes funcionalidades:
 
 - 1 . Adicionar um Livro:
     Selecione a opção "Adicionar livro" no menu principal digitando o número 1.
