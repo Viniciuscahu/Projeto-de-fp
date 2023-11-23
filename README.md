@@ -65,3 +65,6 @@ O sistema exibirá os livros que têm um número de páginas igual ou menor ao n
 Para encerrar o programa, selecione a opção "Sair" digitando o número 9 no menu.
 
 O programa será encerrado e você retornará ao ambiente inicial.
+
+## FLUXOGRAMA
+[FLUXOGRAMA](https://github.com/Viniciuscahu/Projeto-de-fp/files/13449154/pdf.diagrama.de.carol.projeto.pdf)
