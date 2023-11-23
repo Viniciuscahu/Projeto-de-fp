@@ -32,8 +32,13 @@ def visualizar_livros():
 
 
 def atualizar_livro():
+    if not biblioteca:
+        print("Nenhum livro na biblioteca.")
+        return
+
     visualizar_livros()
     nome_antigo = input("Digite o nome do livro a ser atualizado: ")
+
     for i in range(len(biblioteca)):
         if biblioteca[i]["nome"] == nome_antigo:
             nome = input("Digite o novo nome do livro: ")
@@ -61,7 +66,6 @@ def atualizar_livro():
             return
 
     print("Livro não encontrado.")
-
 
 def excluir_livro_por_nome():
     global total
