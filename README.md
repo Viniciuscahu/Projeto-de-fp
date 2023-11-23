@@ -68,3 +68,5 @@ Este é um sistema de gerenciamento de biblioteca simples, construído em Python
 
 ## FLUXOGRAMA
 [FLUXOGRAMA](https://github.com/Viniciuscahu/Projeto-de-fp/files/13449154/pdf.diagrama.de.carol.projeto.pdf)
+## LINK DO DRIVE DO FLUXOGRAMA:
+https://drive.google.com/file/d/1JXAZPxzBdvS7VrzIt5v6CrQOc_CaTpI8/view?usp=sharing
